@@ -509,6 +509,7 @@ class GestureController:
         """Initilaizes attributes."""
         GestureController.gc_mode = 1
         GestureController.cap = cv2.VideoCapture(0)
+        GestureController.cap.set(cv2.CAP_PROP_FPS,120)
         GestureController.CAM_HEIGHT = GestureController.cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
         GestureController.CAM_WIDTH = GestureController.cap.get(cv2.CAP_PROP_FRAME_WIDTH)
     
